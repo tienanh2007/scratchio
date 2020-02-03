@@ -1,0 +1,2 @@
+const model2 = require('./model2');
+
