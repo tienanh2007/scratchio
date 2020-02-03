@@ -2,7 +2,7 @@ const {Client} = require('pg');
 
 const client = new Client({
   user: 'docker',
-  host: 'localhost:8000',
+  host: 'localhost',
   database: 'scratch',
   password: 'docker',
   port: 5432,
