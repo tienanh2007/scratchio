@@ -24,10 +24,8 @@ RUN git clone https://github.com/tienanh2007/scratchio
 WORKDIR scratchio
 
 RUN npm install
-RUN service postgresql stop && service postgresql start
+
 EXPOSE 5432
 EXPOSE 3000
-
-
 
 CMD ["npm", "start"]
