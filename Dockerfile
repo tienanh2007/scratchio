@@ -17,14 +17,18 @@ RUN apt update && apt install -y python-software-properties software-properties-
 USER postgres
 RUN    /etc/init.d/postgresql start &&\
     psql --command "CREATE USER docker WITH SUPERUSER PASSWORD 'docker';" &&\
-    createdb -O docker docker
-
+    createdb -O docker scratch
+	
 USER root
+RUN ls
 RUN git clone https://github.com/tienanh2007/scratchio
-WORKDIR ~/scratchio
-RUN npm install
-RUN node ~/scratchio/model.js
+WORKDIR scratchio
 
+RUN npm install
+EXPOSE 5432
 EXPOSE 3000
+RUN npm run migrate
+
+
 
 CMD ["npm", "start"]
