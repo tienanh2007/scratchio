@@ -16,6 +16,9 @@
 6. Run the test ``` npm run test ```
 
 I'm not sure how much testings should be included so I added simple testing for each layers.
+
 I'm also not sure how the accounts were being created so I decided to create a new account each time a new account is queried.
+
 I'm more familiar with knex.js when dealing with postgres but decided to use node-postgres instead for the simplicity.
+
 Finally, I decided to not support trailing commas for the POST request body since body-parser operates in strict-mode.
