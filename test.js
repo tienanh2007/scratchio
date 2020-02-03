@@ -10,10 +10,10 @@ const server = require('./server');
 
 chai.use(chaiHttp);
 const pool = new Pool({
-  user: 'postgres',
+  user: 'docker',
   host: 'localhost',
   database: 'scratch',
-  password: 'Dien1234',
+  password: 'docker',
   port: 5432,
 });
 
